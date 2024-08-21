@@ -1,0 +1,3 @@
+mernstack is a full development using  single language(javascript).
+It is a combinations of mongoDB,express.js,react.js and node.js. 
+By Learning a single language we can develope a frontend and backend.
