@@ -36,6 +36,16 @@ app.get("/file/:filename", (req, res) => {
   })
 })
 
+app.get('/edit/:filename', (req, res) => {
+  res.render('edit', { filename: req.params.filename });
+})
+app.post('/edit', (req, res) => {
+  fs.rename(`./files/${req.body.previous}`, `./files/${req.body.new}`, (req, res) => {
+    res.redirect("/");
+  })
+})
+
+
 app.get("/profile/:username", (req, res) => {
   res.send(`welcome,${req.params.username}`);
 });
